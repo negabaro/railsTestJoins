@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2019_12_20_123313) do
   create_table "org_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.bigint "org_id", null: false
     t.bigint "user_id", null: false
+    t.string "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["org_id"], name: "index_org_users_on_org_id"
